@@ -1,0 +1,19 @@
+<div class="row">
+
+	<article class="span12 dark data-block">
+						<header>
+							<h2>New customer</h2>
+							<ul class="data-header-actions">
+								<li>
+									<%= link_to 'Back', customers_path, :class => "btn btn-alt" %>
+							</ul>
+						</header>
+						<section class="tab-content">
+							<!-- Tab #horizontal -->
+							<div id="horizontal" class="tab-pane active">				
+								<%= render 'form' %>
+							</div>
+							<!-- /Tab #horizontal -->
+						</section>
+	</article>
+</div>

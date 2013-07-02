@@ -1,0 +1,39 @@
+<div class="row">
+	<article class="span12 dark data-block">
+		<header>
+			<h2>Customer <%= @customer.fullname %></h2>
+			<ul class="data-header-actions">
+				<li class=""><%= link_to 'Back', customers_path %></li>
+				<li class=""><%= link_to 'Edit', edit_customer_path(@customer), :class => "btn btn-alt" %></li>
+			</ul>
+		</header>
+		
+		<section>
+			<p>
+			  <b>Fullname:</b>
+			  <%= @customer.fullname %>
+			</p>
+			
+			<p>
+			  <b>Address:</b>
+			  <%= @customer.address %>
+			</p>
+			
+			<p>
+			  <b>Postalcode:</b>
+			  <%= @customer.postalcode %>
+			</p>
+			
+			<p>
+			  <b>City:</b>
+			  <%= @customer.city %>
+			</p>
+			
+			<p>
+			  <b>Vat:</b>
+			  <%= @customer.vat %>
+			</p>
+		</section>
+		
+	</article>
+</div>

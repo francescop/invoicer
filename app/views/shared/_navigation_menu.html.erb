@@ -1,0 +1,36 @@
+				<!-- Main navigation -->
+				<nav class="main-navigation">
+
+					<!-- Responsive navbar button -->
+					<div class="navbar">
+						<a class="btn btn-alt btn-large btn-primary btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-home"></span> Dashboard</a>
+					</div>
+					<!-- /Responsive navbar button -->
+					
+				<!-- Navigation -->
+					<div class="nav-collapse collapse" role="navigation">
+						<ul>
+							<li <% if params[:controller] == "welcome" %> class="active" <% end %> >
+								<%= link_to root_path do %>
+									<span class="icon-home"></span> Dashboard
+								<% end %>	
+							</li>
+							
+							
+							
+							<li <% if params[:controller] == "invoices" %> class="active" <% end %> ><a href="#"><span class="icon-file"></span> Invoices</a></li>
+							<li <% if params[:controller] == "quotes" %> class="active" <% end %> ><a href="#"><span class="icon-file"></span> Quotes</a></li>
+							
+							<li <% if params[:controller] == "customers" %> class="dark active" <% end %> >
+								<%= link_to customers_path do %>
+								  <span class="icon-file"></span> Customers
+								<% end %>	
+							</li>
+							
+							<li><a href="forms.html"><span class="icon-tasks"></span> Settings</a></li>
+							<li><a href="docs/index.html"><span class="icon-info-sign"></span> Docs</a></li>
+						</ul>
+					</div>
+					<!-- /Navigation -->
+					</nav>
+				<!-- /Main navigation -->

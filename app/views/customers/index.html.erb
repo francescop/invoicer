@@ -1,0 +1,77 @@
+
+				<!-- Grid row -->
+				<div class="row">
+
+					<!-- Data block -->
+					<article class="span12 dark data-block">
+						<header>
+							<h2>Listing customers</h2>
+							<ul class="data-header-actions">
+								<li>
+
+									<%= link_to new_customer_path do %>
+								  		<span class="icon-file"></span> Add customer
+									<% end %>	
+
+								</li>
+							</ul>
+						</header>
+						
+						<section>
+							<table class="datatable table table-striped table-bordered table-hover" id="example-2">
+								<thead>
+									<tr>
+										<th>Full Name</th>
+										<th>Address</th>
+										<th>Postalcode</th>
+										<th>City</th>
+										<th>Status</th>
+										<th></th>
+									</tr>
+								</thead>
+								<tbody>
+									
+									<% @customers.each do |customer| %>
+  										<tr class="<%= cycle("gradeA even", "gradeA odd") -%>">
+											<td><%= customer.fullname %></td>
+										    <td><%= customer.address %></td>
+										    <td><%= customer.postalcode %></td>
+										    <td><%= customer.city %></td>
+										    <td>status</td>
+
+											<td class="toolbar">
+												<div class="btn-group">
+													<%= link_to customer do %>
+												  		<button class="btn btn-small"><span class="icon-eye-open"></span></button>
+													<% end %>
+													
+													<%= link_to edit_customer_path(customer) do %>
+														<button class="btn btn-small"><span class="icon-pencil"></span></button>
+													<% end %>
+													
+													<%= link_to customer, method: :delete, data: { confirm: 'Are you sure?' } do %>
+														<button class="btn btn-small"><span class="icon-remove"></span></button>
+													<% end %>	
+												</div>
+											</td>
+										</tr>
+									<% end %>
+								</tbody>
+							</table>
+
+						</section>
+
+					</article>
+					<!-- /Data block -->
+					
+				</div>
+				<!-- /Grid row -->
+
+
+		
+
+		<!-- jQuery DataTable -->
+		<%= javascript_include_tag "jquery.datatables.min" %>
+		
+		<%= javascript_include_tag "custom/customer_index" %>
+
