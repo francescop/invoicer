@@ -1,0 +1,39 @@
+<div class="row">
+	<article class="span12 dark data-block">
+		<header>
+			<h2>Invoice <%= @invoice.id %></h2>
+			<ul class="data-header-actions">
+				<li class=""><%= link_to 'Back', invoices_path %></li>
+				<li class=""><%= link_to 'Edit', edit_invoice_path(@invoice), :class => "btn btn-alt" %></li>
+			</ul>
+		</header>
+		
+		<section>
+			<p>
+			  <b>Type:</b>
+			  <%= @invoice.invoicetype %>
+			</p>
+			
+			<p>
+			  <b>Status:</b>
+			  <%= @invoice.status %>
+			</p>
+			
+			<p>
+			  <b>Expiredate:</b>
+			  <%= @invoice.expiredate %>
+			</p>
+			
+			<p>
+			  <b>Customer:</b>
+			  <%= @invoice.customer_id %>
+			</p>
+			
+			<p>
+			  <b>Amount:</b>
+			  <%= @invoice.amount %>
+			</p>
+		</section>
+		
+	</article>
+</div>

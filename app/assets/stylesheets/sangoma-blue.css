@@ -5933,6 +5933,7 @@ a:focus {
   height: 50px;
   background: #bdc3c7;
   *zoom: 1;
+  clear:both;
 }
 #footer:before,
 #footer:after {

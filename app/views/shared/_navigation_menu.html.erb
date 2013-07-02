@@ -18,9 +18,12 @@
 							
 							
 							
-							<li <% if params[:controller] == "invoices" %> class="active" <% end %> ><a href="#"><span class="icon-file"></span> Invoices</a></li>
-							<li <% if params[:controller] == "quotes" %> class="active" <% end %> ><a href="#"><span class="icon-file"></span> Quotes</a></li>
-							
+							<li <% if params[:controller] == "invoices" %> class="active" <% end %> >
+								<%= link_to invoices_path do %>
+									<span class="icon-file"></span> Invoices
+								<% end %>	
+							</li>
+														
 							<li <% if params[:controller] == "customers" %> class="dark active" <% end %> >
 								<%= link_to customers_path do %>
 								  <span class="icon-file"></span> Customers
@@ -28,7 +31,6 @@
 							</li>
 							
 							<li><a href="forms.html"><span class="icon-tasks"></span> Settings</a></li>
-							<li><a href="docs/index.html"><span class="icon-info-sign"></span> Docs</a></li>
 						</ul>
 					</div>
 					<!-- /Navigation -->

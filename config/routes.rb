@@ -1,4 +1,6 @@
 Invoicer::Application.routes.draw do
+  resources :invoices
+
   resources :customers
 
   get "welcome/index"
