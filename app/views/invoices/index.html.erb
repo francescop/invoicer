@@ -22,10 +22,10 @@
 						</header>
 						
 						<section>
-							<table class="datatable table table-striped table-bordered table-hover" id="example-2">
+							<table class="datatable table table-striped table-bordered table-hover" id="invoices-table">
 								<thead>
 									<tr>
-										
+										<th>Number</th>
 									    <th>Status</th>
 									    <th>Expiredate</th>
 									    <th>Customer</th>
@@ -37,59 +37,8 @@
 								<tbody>
 									
 									<% @invoices.each do |invoice| %>
-  										<tr class="<%= cycle("gradeA even", "gradeA odd") -%>" id="tr_<%= invoice.id %>">
-											
-										    <td>									    											    	
-										    	<% 	case invoice.status
-											    when "New" %> <span class="label label-inverse">New</span>
-											    <% when "Paid" %> <span class="label label-success">Paid</span>
-											    <% when "Unpaid" %> <span class="label label-danger">Unpaid</span>
-											    <% else %> <%= invoice.status %>
-											    <% end %>
-										    </td>
-										    <td><%= invoice.expiredate.strftime("%d/%m/%Y") %></td>
-										    <td><%= invoice.customer.fullname %></td>
-										    <td><%= invoice.amount %></td>
-										    
-										    <td>
-										    	
-										    	<%= link_to "ajax", invoice, :remote => true %> 
-										    	
-										    	<% if invoice.status == "Unpaid" || invoice.status == "New" %>
-													<button class="btn btn-alt btn-mini btn-success">Set paid</button>
-													
-													
-													<%= link_to("Unlink your facebook account", invoice_path(invoice, :invoice => {:status => "Paid"}), :method => :put, :confirm => "Are you sure?", :remote => true) %>
-													
-												<% else %>
-													<button class="btn btn-alt btn-mini btn-warning">Set unpaid</button>
-													<%= link_to("Unlink your facebook account", invoice_path(invoice, :invoice => {:status => "Unpaid"}), :method => :put, :confirm => "Are you sure?", :remote => true) %>
-
-												<% end %>
-												
-										    </td>
-
-											<td class="toolbar">
-												<div class="btn-group">
-													
-													<button class="btn btn-small" data-toggle="tooltip" title="download pdf" data-placement="bottom"><span class="icon-download-alt"></span></button>
-													
-													
-													
-													
-													<%= link_to invoice do %>
-												  		<button class="btn btn-small" data-toggle="tooltip" title="view" data-placement="bottom"><span class="icon-eye-open"></span></button>
-													<% end %>
-													
-													<%= link_to edit_invoice_path(invoice) do %>
-														<button class="btn btn-small" data-toggle="tooltip" title="edit" data-placement="bottom"><span class="icon-pencil"></span></button>
-													<% end %>
-													
-													<%= link_to invoice, method: :delete, data: { confirm: 'Are you sure?' }, remote: true do %>
-														<button class="btn btn-small" data-toggle="tooltip" title="delete" data-placement="bottom"><span class="icon-remove"></span></button>
-													<% end %>	
-												</div>
-											</td>
+										<tr class="<%= cycle("gradeA even", "gradeA odd") -%>" id="tr_<%= invoice.id %>">
+											<%= render partial: "invoice", object: invoice -%>
 										</tr>
 									<% end %>
 								</tbody>
@@ -127,10 +76,10 @@
 						</header>
 						
 						<section>
-							<table class="datatable table table-striped table-bordered table-hover" id="example-2">
+							<table class="datatable table table-striped table-bordered table-hover" id="quotes-table">
 								<thead>
 									<tr>
-										
+										<th>Number</th>
 									    <th>Status</th>
 									    <th>Expiredate</th>
 									    <th>Customer</th>
@@ -142,50 +91,8 @@
 								<tbody>
 									
 									<% @quotes.each do |quote| %>
-  										<tr class="<%= cycle("gradeA even", "gradeA odd") -%>">
-											
-										    <td>									    											    	
-										    	<% 	case quote.status
-											    when "New" %> <span class="label label-inverse">New</span>
-											    <% when "Paid" %> <span class="label label-success">Paid</span>
-											    <% when "Unpaid" %> <span class="label label-warning">Unpaid</span>
-											    <% else %> <%= quote.status %>
-											    <% end %>
-										    </td>
-										    <td><%= quote.expiredate.strftime("%d/%m/%Y") %></td>
-										    <td><%= quote.customer.fullname %></td>
-										    <td><%= quote.amount %></td>
-										    
-										    <td>
-										    	
-										    	<% if quote.status == "Unpaid" || quote.status == "New" %>
-													<button class="btn btn-alt btn-mini btn-success">Set paid</button>
-												<% else %>
-													<button class="btn btn-alt btn-mini btn-warning">Set unpaid</button>
-												<% end %>
-												
-													<button class="btn btn-alt btn-mini btn-inverse">Became invoice</button>
-										    
-										    </td>
-
-											<td class="toolbar">
-												<div class="btn-group">
-													
-													<button class="btn btn-small" data-toggle="tooltip" title="download pdf" data-placement="bottom"><span class="icon-download-alt"></span></button>
-																										
-													<%= link_to quote do %>
-												  		<button class="btn btn-small" data-toggle="tooltip" title="view" data-placement="bottom"><span class="icon-eye-open"></span></button>
-													<% end %>
-													
-													<%= link_to edit_invoice_path(quote) do %>
-														<button class="btn btn-small" data-toggle="tooltip" title="edit" data-placement="bottom"><span class="icon-pencil"></span></button>
-													<% end %>
-													
-													<%= link_to quote, method: :delete, data: { confirm: 'Are you sure?' } do %>
-														<button class="btn btn-small" data-toggle="tooltip" title="delete" data-placement="bottom"><span class="icon-remove"></span></button>
-													<% end %>	
-												</div>
-											</td>
+  										<tr class="<%= cycle("gradeA even", "gradeA odd") -%>" id="tr_<%= quote.id %>">
+											<%= render partial: "invoice", object: quote -%>
 										</tr>
 									<% end %>
 								</tbody>

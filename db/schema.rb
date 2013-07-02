@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130702124242) do
+ActiveRecord::Schema.define(:version => 20130702233748) do
 
   create_table "customers", :force => true do |t|
     t.string   "fullname"
@@ -28,9 +28,10 @@ ActiveRecord::Schema.define(:version => 20130702124242) do
     t.date     "expiredate"
     t.integer  "customer_id"
     t.float    "amount"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
     t.string   "invoicetype"
+    t.integer  "invoicenumber"
   end
 
 end

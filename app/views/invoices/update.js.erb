@@ -1,1 +1,4 @@
-$(".gradeA").remove();
+$("#tr_<%= @invoice.id %>").fadeOut('fast');
+$("#tr_<%= @invoice.id %>").fadeIn('fast');
+
+$("#tr_<%= @invoice.id %>").html("<%= j render partial: "invoice", object: @invoice %>");

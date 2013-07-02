@@ -54,7 +54,7 @@ class InvoicesController < ApplicationController
       end
     end
   end
-
+  
   # PUT /invoices/1
   # PUT /invoices/1.json
   def update
