@@ -1,0 +1,29 @@
+<h1>Listing invoicefields</h1>
+
+<table>
+  <tr>
+    <th>Type</th>
+    <th>Title</th>
+    <th>Amount</th>
+    <th>Invoice</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @invoicefields.each do |invoicefield| %>
+  <tr>
+    <td><%= invoicefield.type %></td>
+    <td><%= invoicefield.title %></td>
+    <td><%= invoicefield.amount %></td>
+    <td><%= invoicefield.invoice_id %></td>
+    <td><%= link_to 'Show', invoicefield %></td>
+    <td><%= link_to 'Edit', edit_invoicefield_path(invoicefield) %></td>
+    <td><%= link_to 'Destroy', invoicefield, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Invoicefield', new_invoicefield_path %>

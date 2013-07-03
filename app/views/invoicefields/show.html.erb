@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Type:</b>
+  <%= @invoicefield.type %>
+</p>
+
+<p>
+  <b>Title:</b>
+  <%= @invoicefield.title %>
+</p>
+
+<p>
+  <b>Amount:</b>
+  <%= @invoicefield.amount %>
+</p>
+
+<p>
+  <b>Invoice:</b>
+  <%= @invoicefield.invoice_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_invoicefield_path(@invoicefield) %> |
+<%= link_to 'Back', invoicefields_path %>
