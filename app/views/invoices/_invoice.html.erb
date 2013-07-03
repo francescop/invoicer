@@ -16,11 +16,11 @@
 										    	
 										    	<% if invoice.status == "Unpaid" || invoice.status == "New" %>
 													
-													<%= link_to "Set paid", invoice_path(invoice, :invoice => {:status => "Paid"}), :method => :put, :remote => true, :class => "btn btn-alt btn-mini btn-success" %>
+													<%= link_to "Set paid", invoice_path(invoice, :invoice => {:status => "Paid"}), :method => :put, :class => "btn btn-alt btn-mini btn-success", remote: true %>
 													
 												<% else %>
 												
-													<%= link_to "Set unpaid", invoice_path(invoice, :invoice => {:status => "Unpaid"}), :method => :put, :remote => true, :class => "btn btn-alt btn-mini btn-warning" %>
+													<%= link_to "Set unpaid", invoice_path(invoice, :invoice => {:status => "Unpaid"}), :method => :put, :class => "btn btn-alt btn-mini btn-warning", remote: true %>
 
 												<% end %>
 												

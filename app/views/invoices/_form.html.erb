@@ -4,7 +4,7 @@
 	<% remoteform = false %>
 <% end %>
 
-<%= form_for(@invoice, html:{class:"form-horizontal no-margin"}, :remote => remoteform)  do |f| %>
+<%= form_for(@invoice, html:{class:"form-horizontal no-margin"}, remote: remoteform)  do |f| %>
 
  <% if @invoice.errors.any? %>
     <div class="alert alert-error fade in">
@@ -25,8 +25,9 @@
 		  	<%= f.label :invoicenumber, :class => "control-label" %>
 			<div class="controls">
 				<div class="input-append no-margin">
-					<%= f.text_field :invoicenumber, :value => Invoice.last.invoicenumber.to_i + 1 %>
+					<%= f.text_field :invoicenumber %>
 				</div>
+				<span class="help-inline">Last invoice number is <%= Invoice.where(:invoicetype => "Invoice").last.invoicenumber %></span>
 			</div>
 		  </div>
 		  
@@ -34,7 +35,7 @@
 		  	<%= f.label :invoicetype, :class => "control-label" %>
 			<div class="controls">
 				<div class="input-append no-margin">
-					<%= f.select :invoicetype, Invoice::INVOICE_TYPES, :selected => params[:invoicetype], :include_blank => true %>
+					<%= f.select :invoicetype, Invoice::INVOICE_TYPES %>
 				</div>
 			</div>
 		  </div>
@@ -77,7 +78,7 @@
 		  </div> 
 
 			<div class="form-actions">
-				<%= f.submit 'Save changes', :class => "btn btn-alt btn-large btn-primary", :remote => false %>
+				<%= f.submit 'Save changes', :class => "btn btn-alt btn-large btn-primary" %>
 			</div>
 		</fieldset>
 	</form>
