@@ -1,0 +1,27 @@
+<h1>Listing taxfields</h1>
+
+<table>
+  <tr>
+    <th>Taxtype</th>
+    <th>Title</th>
+    <th>Amount</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @taxfields.each do |taxfield| %>
+  <tr>
+    <td><%= taxfield.taxtype %></td>
+    <td><%= taxfield.title %></td>
+    <td><%= taxfield.amount %></td>
+    <td><%= link_to 'Show', taxfield %></td>
+    <td><%= link_to 'Edit', edit_taxfield_path(taxfield) %></td>
+    <td><%= link_to 'Destroy', taxfield, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Taxfield', new_taxfield_path %>

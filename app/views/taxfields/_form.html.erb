@@ -1,0 +1,29 @@
+<%= form_for(@taxfield) do |f| %>
+  <% if @taxfield.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@taxfield.errors.count, "error") %> prohibited this taxfield from being saved:</h2>
+
+      <ul>
+      <% @taxfield.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :taxtype %><br />
+    <%= f.text_field :taxtype %>
+  </div>
+  <div class="field">
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :amount %><br />
+    <%= f.text_field :amount %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,4 +1,8 @@
 Invoicer::Application.routes.draw do
+  resources :taxfields
+
+  resources :settings
+
   resources :invoicefields
 
   resources :invoices

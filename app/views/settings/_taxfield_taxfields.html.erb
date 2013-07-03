@@ -1,0 +1,7 @@
+<fieldset>
+	<%= f.select :taxtype, %w[fixed_amount percentage] %>
+	<%= f.text_field :title, placeholder: "title" %>
+	<%= f.text_field :amount %>
+	<%= f.hidden_field :_destroy %>
+	<%= link_to "[remove]", "#", class: "remove_taxfields" %>
+</fieldset>

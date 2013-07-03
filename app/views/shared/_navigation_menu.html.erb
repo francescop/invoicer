@@ -30,7 +30,11 @@
 								<% end %>	
 							</li>
 							
-							<li><a href="forms.html"><span class="icon-tasks"></span> Settings</a></li>
+							<li <% if params[:controller] == "settings" %> class="dark active" <% end %> >
+								<%= link_to settings_path do %>
+								  <span class="icon-tasks"></span> Settings
+								<% end %>	
+							</li>
 						</ul>
 					</div>
 					<!-- /Navigation -->

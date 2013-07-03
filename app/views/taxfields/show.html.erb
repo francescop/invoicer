@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Taxtype:</b>
+  <%= @taxfield.taxtype %>
+</p>
+
+<p>
+  <b>Title:</b>
+  <%= @taxfield.title %>
+</p>
+
+<p>
+  <b>Amount:</b>
+  <%= @taxfield.amount %>
+</p>
+
+
+<%= link_to 'Edit', edit_taxfield_path(@taxfield) %> |
+<%= link_to 'Back', taxfields_path %>

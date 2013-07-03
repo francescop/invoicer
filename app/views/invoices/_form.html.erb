@@ -83,7 +83,7 @@
 		  <%= f.fields_for :invoicefields do |builder| %>
 		  	<%= render 'invoicefield_fields', f: builder %>
 		  <% end %>
-		  	<%= link_to_add_fields "Add field", f, :invoicefields%>
+		  	<%= link_to_add_fields "Add field", f, :invoicefields %>
 
 			<div class="form-actions">
 				<%= f.submit 'Save changes', :class => "btn btn-alt btn-large btn-primary" %>
