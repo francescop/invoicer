@@ -23,9 +23,13 @@
 									<tr>
 										<th>Full Name</th>
 										<th>Address</th>
-										<th>Postalcode</th>
 										<th>City</th>
-										<th>Status</th>
+										<th>Phone</th>
+										<th>Email</th>
+										<th>Quotes</th>
+										<th>Paid invoices</th>
+										<th>Open invoices</th>
+										<th>Unpaid invoices</th>
 										<th></th>
 									</tr>
 								</thead>
@@ -35,9 +39,14 @@
   										<tr class="<%= cycle("gradeA even", "gradeA odd") -%>">
 											<td><%= customer.fullname %></td>
 										    <td><%= customer.address %></td>
-										    <td><%= customer.postalcode %></td>
 										    <td><%= customer.city %></td>
-										    <td>status</td>
+										    <td><%= customer.phone %></td>
+										    <td><%= customer.email %></td>
+										    <td><span class="label label-danger"><%= customer.quotes %></span></td>
+										    <td><span class="label label-inverse"><%= customer.open_invoices %></span></td>
+										    <td><span class="label label-success"><%= customer.paid_invoices %></span></td>
+										    <td><span class="label label-important"><%= customer.unpaid_invoices %></span></td>
+										    
 
 											<td class="toolbar">
 												<div class="btn-group">

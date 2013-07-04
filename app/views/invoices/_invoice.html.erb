@@ -7,9 +7,10 @@
 											    <% else %> <%= invoice.status %>
 											    <% end %>
 										    </td>
+										    <td><%= invoice.created_at.strftime("%d/%m/%Y") %></td>
 										    <td><%= invoice.expiredate.strftime("%d/%m/%Y") %></td>
 										    <td><%= invoice.customer.fullname %></td>
-										    <td><%= invoice.amount %></td>
+										    <td><%= number_to_currency(invoice.amount, locale: current_user.lang) %></td>
 										    
 										    <td>
 										    	
@@ -43,7 +44,7 @@
 												  		<button class="btn btn-small" data-toggle="tooltip" title="view" data-placement="bottom"><span class="icon-eye-open"></span></button>
 													<% end %>
 													
-													<%= link_to edit_invoice_path(invoice) do %>
+													<%= link_to edit_invoice_path(invoice, :invoicetype => invoice.invoicetype) do %>
 														<button class="btn btn-small" data-toggle="tooltip" title="edit" data-placement="bottom"><span class="icon-pencil"></span></button>
 													<% end %>
 													

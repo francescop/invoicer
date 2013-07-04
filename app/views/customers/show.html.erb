@@ -15,6 +15,16 @@
 			</p>
 			
 			<p>
+			  <b>Phone:</b>
+			  <%= @customer.phone %>
+			</p>
+			
+			<p>
+			  <b>Email:</b>
+			  <%= @customer.email %>
+			</p>
+			
+			<p>
 			  <b>Address:</b>
 			  <%= @customer.address %>
 			</p>
@@ -33,6 +43,34 @@
 			  <b>Vat:</b>
 			  <%= @customer.vat %>
 			</p>
+			
+			
+			<% if @customer.invoices.count > 0 %>
+				<table class="table table-bordered table-striped">
+										<thead>
+											<tr>
+												<th>Invoice type</th>
+												<th>Invoice number</th>
+												<th>Date</th>
+												<th>Expiredate</th>
+												<th>Amount</th>
+												<th>Status</th>
+											</tr>
+										</thead>
+										<tbody>
+											<% @customer.invoices.each do |invoice| %>
+											<tr>
+												<td><%= invoice.invoicetype %></td>
+												<td><%= invoice.invoicenumber %></td>
+												<td><%= invoice.created_at.strftime("%d/%m/%Y") %></td>
+												<td><%= invoice.expiredate.strftime("%d/%m/%Y") %></td>
+												<td><%= number_to_currency(invoice.amount, locale: current_user.lang) %></td>
+												<td><%= invoice.status %></td></td>
+											</tr>
+											<% end %>										
+										</tbody>
+									</table>
+			<% end %>
 		</section>
 		
 	</article>

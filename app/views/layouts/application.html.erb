@@ -80,9 +80,9 @@
 					<span>A flat Bootstrap admin template</span>
 				</h1>
 				
-				
-				<%= render :partial => "shared/user_profile" %>
-				
+				<% if user_signed_in? %>
+					<%= render :partial => "shared/user_profile" %>
+				<% end %>
 
 				
 					
@@ -103,6 +103,13 @@
 				<div class="alert alert-success fade in">
 								<button data-dismiss="alert" class="close">×</button>
 								<%= notice %>
+				</div>
+				<% end %>
+				
+				<% if alert %>
+				<div class="alert alert-error fade in">
+								<button data-dismiss="alert" class="close">×</button>
+								<%= alert %>
 				</div>
 				<% end %>
 				

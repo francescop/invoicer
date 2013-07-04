@@ -1,7 +1,11 @@
+<div class="controls">
 <fieldset>
-	<%= f.select :fieldtype, %w[fixed_amount percentage] %>
-	<%= f.text_field :title, placeholder: "title" %>
-	<%= f.text_field :amount %>
+	<%= f.select :fieldtype, Invoicefield::FIELD_TYPES, :class => "span2" %>
+	<%= f.text_field :title, placeholder: "Description", :class => "span2" %>
+	<%= f.text_field :units, placeholder: "Units", :class => "span1" %>
+	<%= f.text_field :rate, placeholder: "Rate", :class => "span1" %>
+	<%= f.text_field :amount, placeholder: "Total", :class => "span2" %>
 	<%= f.hidden_field :_destroy %>
 	<%= link_to "[remove]", "#", class: "remove_fields" %>
 </fieldset>
+</div>

@@ -2,7 +2,7 @@ class InvoicefieldsController < ApplicationController
   # GET /invoicefields
   # GET /invoicefields.json
   def index
-    @invoicefields = Invoicefield.all
+    @invoicefields = current_user.invoicefields.all
 
     respond_to do |format|
       format.html # index.html.erb
@@ -13,7 +13,7 @@ class InvoicefieldsController < ApplicationController
   # GET /invoicefields/1
   # GET /invoicefields/1.json
   def show
-    @invoicefield = Invoicefield.find(params[:id])
+    @invoicefield = current_user.invoicefields.find(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
@@ -34,14 +34,15 @@ class InvoicefieldsController < ApplicationController
 
   # GET /invoicefields/1/edit
   def edit
-    @invoicefield = Invoicefield.find(params[:id])
+    @invoicefield = current_user.invoicefields.find(params[:id])
   end
 
   # POST /invoicefields
   # POST /invoicefields.json
   def create
     @invoicefield = Invoicefield.new(params[:invoicefield])
-
+    @invoicefield.user = current_user
+    
     respond_to do |format|
       if @invoicefield.save
         format.html { redirect_to @invoicefield, notice: 'Invoicefield was successfully created.' }
@@ -56,7 +57,7 @@ class InvoicefieldsController < ApplicationController
   # PUT /invoicefields/1
   # PUT /invoicefields/1.json
   def update
-    @invoicefield = Invoicefield.find(params[:id])
+    @invoicefield = current_user.invoicefields.find(params[:id])
 
     respond_to do |format|
       if @invoicefield.update_attributes(params[:invoicefield])
@@ -72,7 +73,7 @@ class InvoicefieldsController < ApplicationController
   # DELETE /invoicefields/1
   # DELETE /invoicefields/1.json
   def destroy
-    @invoicefield = Invoicefield.find(params[:id])
+    @invoicefield = current_user.invoicefields.find(params[:id])
     @invoicefield.destroy
 
     respond_to do |format|

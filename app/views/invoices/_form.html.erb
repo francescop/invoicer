@@ -35,7 +35,7 @@
 		  	<%= f.label :invoicetype, :class => "control-label" %>
 			<div class="controls">
 				<div class="input-append no-margin">
-					<%= f.select :invoicetype, Invoice::INVOICE_TYPES %>
+					<%= f.select :invoicetype, Invoice::INVOICE_TYPES, :selected => params[:invoicetype] %>
 				</div>
 			</div>
 		  </div>
@@ -71,20 +71,19 @@
 		  <div class="control-group">
 		  	<%= f.label :amount, :class => "control-label" %>
 			<div class="controls">
-				<div class="input-append no-margin">
-					<%= f.text_field :amount %>
+				<div class="no-margin uneditable-input">
+					<%= @invoice.amount if !@invoice.amount.nil? %>
 				</div>
 			</div>
 		  </div> 
-		  
-		  
-		  
-		  
-		  <%= f.fields_for :invoicefields do |builder| %>
-		  	<%= render 'invoicefield_fields', f: builder %>
-		  <% end %>
-		  	<%= link_to_add_fields "Add field", f, :invoicefields %>
-
+		
+		  <div class="control-group">
+			  <%= f.fields_for :invoicefields do |builder| %>
+			  	<%= render 'invoicefield_fields', f: builder %>
+			  <% end %>
+			  <%= link_to_add_fields "Add field", f, :invoicefields %>
+		  </div>
+			
 			<div class="form-actions">
 				<%= f.submit 'Save changes', :class => "btn btn-alt btn-large btn-primary" %>
 			</div>

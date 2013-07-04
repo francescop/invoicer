@@ -1,7 +1,5 @@
 Invoicer::Application.routes.draw do
-  resources :taxfields
-
-  resources :settings
+  devise_for :users
 
   resources :invoicefields
 

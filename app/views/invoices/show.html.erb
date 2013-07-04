@@ -1,7 +1,7 @@
 <div class="row">
 	<article class="span12 dark data-block">
 		<header>
-			<h2>Invoice <%= @invoice.id %></h2>
+			<h2>Invoice <%= @invoice.invoicenumber if @invoice.invoicenumber %></h2>
 			<ul class="data-header-actions">
 				<li class=""><%= link_to 'Back', invoices_path %></li>
 				<li class=""><%= link_to 'Edit', edit_invoice_path(@invoice), :class => "btn btn-alt" %></li>
@@ -26,13 +26,39 @@
 			
 			<p>
 			  <b>Customer:</b>
-			  <%= @invoice.customer_id %>
+			  <%= @invoice.customer.fullname %>
 			</p>
 			
-			<p>
-			  <b>Amount:</b>
-			  <%= @invoice.amount %>
-			</p>
+			<table class="table table-bordered table-striped">
+									<thead>
+										<tr>
+											<th>Description</th>
+											<th>Units</th>
+											<th>Rate</th>
+											<th>Price</th>
+										</tr>
+									</thead>
+									<tbody>
+										<% @invoice.invoicefields.each do |field| %>
+										<tr>
+											<td><%= field.title %></td>
+											<td><%= field.units %></td>
+											<td><%= field.rate %></td>
+											<td><%= field.amount.to_s %><% if field.fieldtype.start_with?("percentage") %> % <% end %>  </td>
+										</tr>
+										<% end %>
+										<tr>
+											<td>
+												<strong>Total</strong>
+											</td>
+											<td></td>
+											<td></td>
+											<td><strong><%= @invoice.amount %></strong></td>
+										</tr>
+										
+									</tbody>
+								</table>
+			
 		</section>
 		
 	</article>
