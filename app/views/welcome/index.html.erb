@@ -58,7 +58,7 @@
 					<!-- Data block -->
 					<article class="span12 turquoise data-block">
 						<header>
-							<h2><span class="icon-calendar"></span> Calendar</h2>
+							<h2><span class="icon-calendar"></span> <%=  t("Calendar") %></h2>
 						</header>
 						<section class="tab-content">
 
@@ -96,7 +96,7 @@
 				var y = date.getFullYear();
 				$('.full-calendar-demo').fullCalendar({
 					header: {
-						left: 'today month,basicWeek',
+						left: '<%= t('today month,basicWeek') %>',
 						center: 'title',
 						right: 'prev,next'
 					},
@@ -105,6 +105,18 @@
 						next: '<span class="icon-chevron-right"></span>'
 					},
 					editable: true,
+					<% if I18n.locale = "it" %>
+						buttonText: {
+				            today: 'oggi',
+				            day: 'giorno',
+				            week:'settimana',
+				            month:'mese'
+				        },
+						monthNames: ['Gennaio','Febbraio','Marzo','Aprile','Maggio','Giugno','Luglio','Agosto','Settembre','Ottobre','Novembre','Dicembre'],
+						monthNamesShort: ['Gen','Feb','Mar','Apr','Mag','Giu','Lug','Ago','Sett','Ott','Nov','Dic'],
+						dayNames: ['Dimanche','Lundi','Mardi','Mercredi','Jeudi','Vendredi','Samedi'],
+						dayNamesShort: ['Lun', 'Mar', 'Mer', 'Gio', 'Ven', 'Sab', 'Dom'],
+					<% end %>
 					events: [
 					
 					<% current_user.invoices.where(:invoicetype => 'Invoice').each do |invoice| %>

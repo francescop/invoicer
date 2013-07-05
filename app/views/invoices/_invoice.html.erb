@@ -35,9 +35,9 @@
 											<td class="toolbar">
 												<div class="btn-group">
 													
-													<button class="btn btn-small" data-toggle="tooltip" title="download pdf" data-placement="bottom"><span class="icon-download-alt"></span></button>
-													
-													
+													<%= link_to invoice_path(invoice, format: "pdf") do %>
+												  		<button class="btn btn-small" data-toggle="tooltip" title="download pdf" data-placement="bottom"><span class="icon-download-alt"></span></button>
+													<% end %>
 													
 													
 													<%= link_to invoice do %>

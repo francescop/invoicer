@@ -7,3 +7,30 @@ it:
       format:
         format: "%n %u"
         unit: "€"
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            current_password:
+              blank: "Password richiesta"
+    attributes:
+      customer:
+        fullname: "Nome completo"
+        address: "Indirizzo"
+        city: "Città"
+        postalcode: "Codice postale"
+        vat: "Partita iva"
+        phone: "Telefono"
+
+#invoice -> :amount, :customer_id, :expiredate, :status, :invoicetype, :invoicenumber, :invoicefields_attributes
+
+    models:
+      customer: "Cliente"
+      invoice: "Fattura"
+      user: "Utente"
+  
+  "Calendar": "Calendario"
+  'today month,basicWeek': 'today month,basicWeek' # 'oggi mese,settimana'
+  'title': 'titolo'
+  

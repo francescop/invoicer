@@ -19,6 +19,12 @@ class InvoicesController < ApplicationController
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @invoice }
+      format.pdf do
+        pdf = InvoicePdf.new(@invoice, current_user, view_context)
+        send_data pdf.render, filename: "#{@invoice.invoicenumber}_#{@invoice.customer.fullname}.pdf",
+                              type: "application/pdf",
+                              disposition: "inline"
+      end
       #format.js
     end
   end
