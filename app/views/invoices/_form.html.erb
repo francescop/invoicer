@@ -27,7 +27,10 @@
 				<div class="input-append no-margin">
 					<%= f.text_field :invoicenumber %>
 				</div>
-				<span class="help-inline">Last invoice number is <%= Invoice.where(:invoicetype => "Invoice").last.invoicenumber %></span>
+				<span class="help-inline">
+					<% if current_user.invoices.count > 0 %>
+						<%= t("Last invoice number is") %> <%= current_user.invoices.where(:invoicetype => "Invoice").last.invoicenumber %></span>
+					<% end %>
 			</div>
 		  </div>
 		  
@@ -63,7 +66,7 @@
 		  	<%= f.label :customer_id, :class => "control-label" %>
 			<div class="controls">
 				<div class="input-append no-margin">
-					<%= f.select(:customer_id, Customer.all.collect {|a| [a.fullname, a.id]}, :include_blank => true ) -%>
+					<%= f.select(:customer_id, current_user.customers.all.collect {|a| [a.fullname, a.id]}, :include_blank => true ) -%>
 				</div>
 			</div>
 		  </div>
@@ -81,11 +84,11 @@
 			  <%= f.fields_for :invoicefields do |builder| %>
 			  	<%= render 'invoicefield_fields', f: builder %>
 			  <% end %>
-			  <%= link_to_add_fields "Add field", f, :invoicefields %>
+			  <%= link_to_add_fields t("Add field"), f, :invoicefields %>
 		  </div>
 			
 			<div class="form-actions">
-				<%= f.submit 'Save changes', :class => "btn btn-alt btn-large btn-primary" %>
+				<%= f.submit t('Save changes'), :class => "btn btn-alt btn-large btn-primary" %>
 			</div>
 		</fieldset>
 	</form>

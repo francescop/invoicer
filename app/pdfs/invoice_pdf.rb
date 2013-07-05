@@ -19,7 +19,7 @@ class InvoicePdf < Prawn::Document
     text "#{@user.email}" 
     text "#{@user.vat}"
     #move_down 10
-    bounding_box([400,cursor],:width=>100,:height=>155) do
+    bounding_box([350,cursor],:width=>200,:height=>155) do
       text "Customer:", style: :bold, position: :right
       text "#{@invoice.customer.fullname}" 
       text "#{@invoice.customer.address}"
@@ -34,7 +34,7 @@ class InvoicePdf < Prawn::Document
   
   def invoice_number
     move_down 20
-    text "Invoice \##{@invoice.invoicenumber}", size: 15, position: :right, style: :bold  
+    text I18n.t("Invoice") + " \##{@invoice.invoicenumber}", size: 15, position: :right, style: :bold  
   end
   
   def line_items
@@ -49,7 +49,7 @@ class InvoicePdf < Prawn::Document
   end
 
   def line_item_rows
-    [["Product", "Qty", "Unit Price", "Amount"]] +
+    [[I18n.t("Product"), I18n.t("Qty"), I18n.t("Unit Price"), I18n.t("Amount")]] +
     @invoice.invoicefields.map do |field|
       
       if field.fieldtype.start_with?("percentage")
@@ -66,6 +66,6 @@ class InvoicePdf < Prawn::Document
   
   def total_price
     move_down 15
-    text "Total Price: #{price(@invoice.amount)}", size: 14, style: :bold
+    text I18n.t('Total Price') + ": #{price(@invoice.amount)}", size: 14, style: :bold
   end
 end

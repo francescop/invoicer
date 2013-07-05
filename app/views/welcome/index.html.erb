@@ -15,7 +15,7 @@
 							<%= link_to new_invoice_path(:invoicetype => "Invoice"), :class => "span2 data-block widget-block" do %>
 								<section>
 									<span class="icon-file-new-alt"></span>
-									<strong>Add invoice</strong>
+									<strong><%= t('Add invoice') %></strong>
 								</section>
 							<% end %>
 							<!-- /Data block -->
@@ -24,7 +24,7 @@
 							<%= link_to new_invoice_path(:invoicetype => "Quote"), :class => "span2 data-block widget-block" do %>
 								<section>
 									<span class="icon-file-new-alt"></span>
-									<strong>Add quote</strong>
+									<strong><%= t('Add quote') %></strong>
 								</section>
 							<% end %>
 							<!-- /Data block -->
@@ -33,7 +33,7 @@
 							<%= link_to new_customer_path, :class => "span2 data-block widget-block" do %>
 								  		<section>
 									<span class="icon-address-book-alt"></span>
-									<strong>Add customer</strong>
+									<strong><%= t('Add customer') %></strong>
 								</section>
 							<% end %>	
 							<!-- /Data block -->
@@ -58,7 +58,7 @@
 					<!-- Data block -->
 					<article class="span12 turquoise data-block">
 						<header>
-							<h2><span class="icon-calendar"></span> <%=  t("Calendar") %></h2>
+							<h2><span class="icon-calendar"></span> <%= t("Calendar") %></h2>
 						</header>
 						<section class="tab-content">
 
@@ -74,7 +74,7 @@
 
 						</section>
 						<footer>
-							<p>Invoices calendar</p>
+							<p><%= t('Invoices calendar') %></p>
 						</footer>
 					</article>
 					<!-- /Data block -->

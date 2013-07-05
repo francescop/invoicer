@@ -5,7 +5,7 @@
 
 					<!-- Responsive navbar button -->
 					<div class="navbar">
-						<a class="btn btn-alt btn-large btn-primary btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-home"></span> Dashboard</a>
+						<a class="btn btn-alt btn-large btn-primary btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-home"></span> <%= t("Dashboard") %></a>
 					</div>
 					<!-- /Responsive navbar button -->
 					
@@ -14,7 +14,7 @@
 						<ul>
 							<li <% if params[:controller] == "welcome" %> class="active" <% end %> >
 								<%= link_to root_path do %>
-									<span class="icon-home"></span> Dashboard
+									<span class="icon-home"></span> <%= t("Dashboard") %>
 								<% end %>	
 							</li>
 							
@@ -22,13 +22,13 @@
 							
 							<li <% if params[:controller] == "invoices" %> class="active" <% end %> >
 								<%= link_to invoices_path do %>
-									<span class="icon-file"></span> Invoices
+									<span class="icon-file"></span> <%= t("Invoices") %>
 								<% end %>	
 							</li>
 														
 							<li <% if params[:controller] == "customers" %> class="dark active" <% end %> >
 								<%= link_to customers_path do %>
-								  <span class="icon-file"></span> Customers
+								  <span class="icon-file"></span> <%= t("Customers") %>
 								<% end %>	
 							</li>
 							

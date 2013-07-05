@@ -1,41 +1,41 @@
 <div class="row">
 	<article class="span12 dark data-block">
 		<header>
-			<h2>Invoice <%= @invoice.invoicenumber if @invoice.invoicenumber %></h2>
+			<h2><%= t('Invoice') %> <%= @invoice.invoicenumber if @invoice.invoicenumber %></h2>
 			<ul class="data-header-actions">
-				<li class=""><%= link_to 'Back', invoices_path %></li>
-				<li class=""><%= link_to 'Edit', edit_invoice_path(@invoice), :class => "btn btn-alt" %></li>
+				<li class=""><%= link_to t('Back'), invoices_path %></li>
+				<li class=""><%= link_to t('Edit'), edit_invoice_path(@invoice), :class => "btn btn-alt" %></li>
 			</ul>
 		</header>
 		
 		<section>
 			<p>
-			  <b>Type:</b>
+			  <b><%= t('Type') %>:</b>
 			  <%= @invoice.invoicetype %>
 			</p>
 			
 			<p>
-			  <b>Status:</b>
+			  <b><%= t('Status') %>:</b>
 			  <%= @invoice.status %>
 			</p>
 			
 			<p>
-			  <b>Expiredate:</b>
+			  <b><%= t('Expiredate') %>:</b>
 			  <%= @invoice.expiredate %>
 			</p>
 			
 			<p>
-			  <b>Customer:</b>
+			  <b><%= t('Customer') %>:</b>
 			  <%= @invoice.customer.fullname %>
 			</p>
 			
 			<table class="table table-bordered table-striped">
 									<thead>
 										<tr>
-											<th>Description</th>
-											<th>Units</th>
-											<th>Rate</th>
-											<th>Price</th>
+											<th><%= t('Description') %></th>
+											<th><%= t('Units') %></th>
+											<th><%= t('Rate') %></th>
+											<th><%= t('Price') %></th>
 										</tr>
 									</thead>
 									<tbody>
@@ -49,7 +49,7 @@
 										<% end %>
 										<tr>
 											<td>
-												<strong>Total</strong>
+												<strong><%= t('Total') %></strong>
 											</td>
 											<td></td>
 											<td></td>

@@ -2,6 +2,11 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 it:
+  field_types:
+    fixed_amount: 'importo fisso'
+    percentage: 'percentuale'
+    fixed_tax: 'tassa fissa'
+    percentage_tax: 'tassa percentuale'
   number:
     currency:
       format:
@@ -14,6 +19,20 @@ it:
           attributes:
             current_password:
               blank: "Password richiesta"
+         
+        customer:
+          attributes:
+            fullname:
+              blank: ": richiesto"
+ 
+        invoice:
+          attributes:
+            customer_id:
+              blank: ": richiesto"
+            invoicenumber:
+              taken: ": numero già utilizzato"
+              not_a_number: ": deve essere un numero"
+              blank: ": richiesto"
     attributes:
       customer:
         fullname: "Nome completo"
@@ -22,7 +41,25 @@ it:
         postalcode: "Codice postale"
         vat: "Partita iva"
         phone: "Telefono"
-
+      
+      invoice:
+        amount: 'Importo'
+        customer_id: 'ID cliente'
+        expiredate: 'Data scadenza'
+        status: 'Stato'
+        invoicetype: 'Tipo fattura'
+        invoicenumber: 'Numero fattura'
+        'Invoice': 'Fattura'
+      
+      user:
+        companyname: "Nome azienda"
+        lang: "Lingua"
+        phone: "Telefono"
+        address: "Indirizzo"
+        city: "Città"
+        postalcode: "CAP"
+        vat: "Partita iva"
+        
 #invoice -> :amount, :customer_id, :expiredate, :status, :invoicetype, :invoicenumber, :invoicefields_attributes
 
     models:
@@ -30,7 +67,81 @@ it:
       invoice: "Fattura"
       user: "Utente"
   
+  'Back': 'Indietro'
+  'Edit': 'Modifica'
   "Calendar": "Calendario"
   'today month,basicWeek': 'today month,basicWeek' # 'oggi mese,settimana'
   'title': 'titolo'
+  'Save changes': 'Salva cambiamenti'
+  'view': 'visualizza'
+  'edit': 'modifica'
+  'delete': 'elimina'
+  'Invoice': 'Fattura'
+  'Quote': 'Preventivo'
+  'Product': 'Prodotto'
+  'Qty': 'Quantità'
+  "Unit Price": 'Prezzo unitario'
+  "Amount": 'Importo'
+  'Total Price': 'Prezzo Totale'
   
+  # customer
+  
+  'Editing customer': 'Modifica cliente'
+  'Listing customers': 'Lista clienti'
+  'Add customer': 'Aggiungi cliente'
+  'Customer': 'Cliente'
+  'New customer': 'Nuovo cliente'
+  'Full Name': 'Nome completo'
+  'Full name': 'Nome completo'
+  'Postalcode': "Codice postale"
+  'Address': 'Indirizzo'
+  'City': 'Città'
+  'Phone': 'Telefono'
+  'Quotes': 'Preventivi'
+  'Paid invoices': 'Fatture pagate'
+  'Open invoices': 'Fatture aperte'
+  'Unpaid invoices': 'Fatture non pagate/scadute'
+  'Vat': 'Partita iva'
+  'Invoice type': 'Tipo fattura'
+  'Invoice number': 'Numero fattura'
+  'Date': 'Data'
+  'Expiredate': 'Data scadenza'
+  'Amount': 'Importo'
+  'Status': 'Stato'
+  
+  # welcome 
+  'Add invoice': 'Aggiungi fattura'
+  'Add quote': 'Aggiungi preventivo'
+  'Add customer': 'Aggiungi cliente'
+  'Invoices calendar': 'Calendario fatture'
+  'Edit profile': 'Modifica profilo'
+  'Dashboard': 'Home'
+  'Invoices': 'Fatture'
+  'Customers': 'Clienti'
+   
+  # invoice
+  'Invoice': 'Fattura'
+  'Type': 'Tipo'
+  'Total': 'Totale'
+  'Price': 'Prezzo'
+  'Rate': 'Tariffa'
+  'Units': 'Unità'
+  'Description': 'Descrizione'
+  'New invoice': 'Nuova fattura'
+  'Add invoice': 'Aggiungi fattura'
+  'Add quote': 'Aggiungi preventivo'
+  'Listing invoices': 'Lista fatture'
+  'Listing quotes': 'Lista preventivi'
+  'Number': 'Numero'
+  'Actions': 'Azioni'
+  'Editing invoice': 'Modifica fattura'
+  '[remove]': '[rimuovi]'
+  'New': 'Nuova'
+  'Paid': 'Pagata'
+  'Unpaid': 'Non pagata'
+  'Set paid': 'Diventa pagata'
+  'Set unpaid': 'Diventa non pagata'
+  'Became invoice': 'Diventa fattura' 
+  'Last invoice number is': 'Ultima fattura è la numero'
+  'Add field': 'Aggiungi campo'
+  'Save changes': 'Salva'

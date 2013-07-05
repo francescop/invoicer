@@ -5,12 +5,12 @@
 					<!-- Data block -->
 					<article class="span12 dark data-block">
 						<header>
-							<h2>Listing customers</h2>
+							<h2><%= t('Listing customers') %></h2>
 							<ul class="data-header-actions">
 								<li>
 
 									<%= link_to new_customer_path do %>
-								  		<span class="icon-file"></span> Add customer
+								  		<span class="icon-file"></span><%=  t('Add customer') %>
 									<% end %>	
 
 								</li>
@@ -21,15 +21,15 @@
 							<table class="datatable table table-striped table-bordered table-hover" id="example-2">
 								<thead>
 									<tr>
-										<th>Full Name</th>
-										<th>Address</th>
-										<th>City</th>
-										<th>Phone</th>
-										<th>Email</th>
-										<th>Quotes</th>
-										<th>Paid invoices</th>
-										<th>Open invoices</th>
-										<th>Unpaid invoices</th>
+										<th><%= t('Full Name') %></th>
+										<th><%= t('Address') %></th>
+										<th><%= t('City') %></th>
+										<th><%= t('Phone') %></th>
+										<th><%= t('Email') %></th>
+										<th><%= t('Quotes') %></th>
+										<th><%= t('Paid invoices') %></th>
+										<th><%= t('Open invoices') %></th>
+										<th><%= t('Unpaid invoices') %></th>
 										<th></th>
 									</tr>
 								</thead>

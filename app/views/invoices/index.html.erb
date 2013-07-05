@@ -9,12 +9,12 @@
 					<!-- Data block -->
 					<article class="span12 dark data-block">
 						<header>
-							<h2>Listing invoices</h2>
+							<h2><%= t('Listing invoices') %></h2>
 							<ul class="data-header-actions">
 								<li>
 
 									<%= link_to new_invoice_path(:invoicetype => "Invoice") do %>
-								  		<span class="icon-file"></span> Add invoice
+								  		<span class="icon-file"></span> <%= t('Add invoice') %>
 									<% end %>	
 
 								</li>
@@ -25,13 +25,13 @@
 							<table class="datatable table table-striped table-bordered table-hover" id="invoices-table">
 								<thead>
 									<tr>
-										<th>Number</th>
-									    <th>Status</th>
-									    <th>Date</th>
-									    <th>Expiredate</th>
-									    <th>Customer</th>
-									    <th>Amount</th>
-									    <th>Actions</th>
+										<th><%= t('Number') %></th>
+									    <th><%= t('Status') %></th>
+									    <th><%= t('Date') %></th>
+									    <th><%= t('Expiredate') %></th>
+									    <th><%= t('Customer') %></th>
+									    <th><%= t('Amount') %></th>
+									    <th><%= t('Actions') %></th>
 									    <th></th>
 									</tr>
 								</thead>
@@ -65,12 +65,12 @@
 					<!-- Data block -->
 					<article class="span12 dark data-block">
 						<header>
-							<h2>Listing quotes</h2>
+							<h2><%= t('Listing quotes') %></h2>
 							<ul class="data-header-actions">
 								<li>
 
 									<%= link_to new_invoice_path(:invoicetype => "Quote") do %>
-								  		<span class="icon-file"></span> Add quote
+								  		<span class="icon-file"></span> <%= t('Add quote') %>
 									<% end %>	
 
 								</li>
@@ -81,13 +81,13 @@
 							<table class="datatable table table-striped table-bordered table-hover" id="quotes-table">
 								<thead>
 									<tr>
-										<th>Number</th>
-									    <th>Status</th>
-									    <th>Date</th>
-									    <th>Expiredate</th>
-									    <th>Customer</th>
-									    <th>Amount</th>
-									    <th>Actions</th>
+										<th><%= t('Number') %></th>
+									    <th><%= t('Status') %></th>
+									    <th><%= t('Date') %></th>
+									    <th><%= t('Expiredate') %></th>
+									    <th><%= t('Customer') %></th>
+									    <th><%= t('Amount') %></th>
+									    <th><%= t('Actions') %></th>
 									    <th></th>
 									</tr>
 								</thead>

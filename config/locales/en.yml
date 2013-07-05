@@ -2,6 +2,11 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
+  field_types:
+    fixed_amount: 'fixed amount'
+    percentage: 'percentage'
+    fixed_tax: 'fixed amount tax'
+    percentage_tax: 'percentage tax'
   hello: "Hello world"
   "Calendar": "Calendar"
   'today month,basicWeek': 'today month,basicWeek'
