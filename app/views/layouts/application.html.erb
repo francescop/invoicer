@@ -34,24 +34,7 @@
 		<%= javascript_include_tag "selectivizr" %>
 
 		<%= javascript_include_tag "bootstrap.min" %>
-		<script>
-			$(document).ready(function(){
-				
-				// Tooltips
-				$('[title]').tooltip({
-					placement: 'top',
-					container: 'body'
-				});	
-
-				// Tabs
-				$('.demoTabs a, .demoTabs2 a').click(function (e) {
-					e.preventDefault();
-					$(this).tab('show');
-					$('.fullcalendar').fullCalendar('render'); // Refresh jQuery FullCalendar for hidden tabs
-				})
-
-			});
-		</script>
+		
 		
 		<script type="text/javascript">
 			// google stuff

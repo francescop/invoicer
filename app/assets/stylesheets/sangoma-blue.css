@@ -5916,7 +5916,6 @@ a:focus {
   width: 220px;
   height: 60px;
   background-repeat: no-repeat;
-  background-image: url("../img/template_logo.png");
 }
 #header > h1 span {
   margin: -20px 0 0 71px;
@@ -7216,7 +7215,7 @@ textarea[readonly] {
 }
 .loading {
   display: inline-block;
-  background-image: url("../img/icons/icon_loading_blue.gif");
+  background-image: url("../assets/icons/icon_loading_blue.gif");
   background-repeat: no-repeat;
   background-position: center;
   font: 0/0 a;
@@ -7228,57 +7227,57 @@ textarea[readonly] {
   height: 28px;
 }
 .loading.red {
-  background-image: url("../img/icons/icon_loading_red.gif");
+  background-image: url("../assets/icons/icon_loading_red.gif");
 }
 .loading.blue {
-  background-image: url("../img/icons/icon_loading_blue.gif");
+  background-image: url("../assets/icons/icon_loading_blue.gif");
 }
 .loading.green {
-  background-image: url("../img/icons/icon_loading_green.gif");
+  background-image: url("../assets/icons/icon_loading_green.gif");
 }
 .loading.purple {
-  background-image: url("../img/icons/icon_loading_purple.gif");
+  background-image: url("../assets/icons/icon_loading_purple.gif");
 }
 .loading.turquoise {
-  background-image: url("../img/icons/icon_loading_turquoise.gif");
+  background-image: url("../assets/icons/icon_loading_turquoise.gif");
 }
 .loading.orange {
-  background-image: url("../img/icons/icon_loading_orange.gif");
+  background-image: url("../assets/icons/icon_loading_orange.gif");
 }
 .loading.gray {
-  background-image: url("../img/icons/icon_loading_gray.gif");
+  background-image: url("../assets/icons/icon_loading_gray.gif");
 }
 .loading.dark {
-  background-image: url("../img/icons/icon_loading_dark.gif");
+  background-image: url("../assets/icons/icon_loading_dark.gif");
 }
 .data-header-actions .loading {
-  background-image: url("../img/icons/icon_loading_blue_header.gif");
+  background-image: url("../assets/icons/icon_loading_blue_header.gif");
   width: 28px;
   height: 28px;
 }
 .data-header-actions .loading.red {
-  background-image: url("../img/icons/icon_loading_red_header.gif");
+  background-image: url("../assets/icons/icon_loading_red_header.gif");
 }
 .data-header-actions .loading.blue {
-  background-image: url("../img/icons/icon_loading_blue_header.gif");
+  background-image: url("../assets/icons/icon_loading_blue_header.gif");
 }
 .data-header-actions .loading.green {
-  background-image: url("../img/icons/icon_loading_green_header.gif");
+  background-image: url("../assets/icons/icon_loading_green_header.gif");
 }
 .data-header-actions .loading.purple {
-  background-image: url("../img/icons/icon_loading_purple_header.gif");
+  background-image: url("../assets/icons/icon_loading_purple_header.gif");
 }
 .data-header-actions .loading.turquoise {
-  background-image: url("../img/icons/icon_loading_turquoise_header.gif");
+  background-image: url("../assets/icons/icon_loading_turquoise_header.gif");
 }
 .data-header-actions .loading.orange {
-  background-image: url("../img/icons/icon_loading_orange_header.gif");
+  background-image: url("../assets/icons/icon_loading_orange_header.gif");
 }
 .data-header-actions .loading.gray {
-  background-image: url("../img/icons/icon_loading_gray_header.gif");
+  background-image: url("../assets/icons/icon_loading_gray_header.gif");
 }
 .data-header-actions .loading.dark {
-  background-image: url("../img/icons/icon_loading_dark_header.gif");
+  background-image: url("../assets/icons/icon_loading_dark_header.gif");
 }
 .accordion .accordion-group {
   margin: 0;
@@ -7874,7 +7873,7 @@ body.login .container .login-logo .brand {
   display: block;
   width: 100px;
   height: 100px;
-  background-image: url("../img/template_login_logo.png");
+  background-image: url("../assets/template_login_logo.png");
   background-repeat: no-repeat;
   background-position: left center;
 }
@@ -8642,7 +8641,7 @@ a.fc-event:hover {
   color: #fff;
 }
 .elfinder-contextmenu .ui-state-hover .elfinder-contextmenu-arrow {
-  background-image: url('../img/arrows-active.html');
+  background-image: url('../assets/arrows-active.html');
 }
 #elfinder .elfinder-cwd-view-icons .elfinder-cwd-file {
   width: 120px;
@@ -8696,19 +8695,19 @@ a.fc-event:hover {
   *cursor: hand;
 }
 .dataTables_wrapper table.table thead .sorting {
-  background-image: url("../img/plugins/dataTables/sort_both.png");
+  background-image: url("../assets/plugins/dataTables/sort_both.png");
 }
 .dataTables_wrapper table.table thead .sorting_asc {
-  background-image: url("../img/plugins/dataTables/sort_asc.png");
+  background-image: url("../assets/plugins/dataTables/sort_asc.png");
 }
 .dataTables_wrapper table.table thead .sorting_desc {
-  background-image: url("../img/plugins/dataTables/sort_desc.png");
+  background-image: url("../assets/plugins/dataTables/sort_desc.png");
 }
 .dataTables_wrapper table.table thead .sorting_asc_disabled {
-  background-image: url("../img/plugins/dataTables/sort_asc_disabled.png");
+  background-image: url("../assets/plugins/dataTables/sort_asc_disabled.png");
 }
 .dataTables_wrapper table.table thead .sorting_desc_disabled {
-  background-image: url("../img/plugins/dataTables/sort_desc_disabled.png");
+  background-image: url("../assets/plugins/dataTables/sort_desc_disabled.png");
 }
 .dataTables_wrapper table.table thead .sorting,
 .dataTables_wrapper table.table thead .sorting_asc,
@@ -8824,7 +8823,7 @@ div.wysiwyg ul.toolbar {
   border: none;
 }
 div.wysiwyg ul.toolbar li {
-  background-image: url("../img/plugins/jWYSIWYG/jquery.wysiwyg.gif");
+  background-image: url("../assets/plugins/jWYSIWYG/jquery.wysiwyg.gif");
 }
 div.wysiwyg ul.toolbar li.wysiwyg-button-hover {
   background-color: #f2f3f4;
@@ -9051,7 +9050,7 @@ div.jGrowl div.purple a:hover {
 .colorpicker-saturation {
   width: 100px;
   height: 100px;
-  background-image: url("../img/plugins/colorpicker/saturation.png");
+  background-image: url("../assets/plugins/colorpicker/saturation.png");
   cursor: crosshair;
   float: left;
 }
@@ -9099,10 +9098,10 @@ div.jGrowl div.purple a:hover {
   margin-top: -1px;
 }
 .colorpicker-hue {
-  background-image: url("../img/plugins/colorpicker/hue.png");
+  background-image: url("../assets/plugins/colorpicker/hue.png");
 }
 .colorpicker-alpha {
-  background-image: url("../img/plugins/colorpicker/alpha.png");
+  background-image: url("../assets/plugins/colorpicker/alpha.png");
   display: none;
 }
 .colorpicker {
@@ -9134,7 +9133,7 @@ div.jGrowl div.purple a:hover {
   height: 10px;
   margin-top: 5px;
   clear: both;
-  background-image: url("../img/plugins/colorpicker/alpha.png");
+  background-image: url("../assets/plugins/colorpicker/alpha.png");
   background-position: 0 100%;
 }
 .colorpicker-color div {
@@ -9688,7 +9687,7 @@ div.jGrowl div.purple a:hover {
 .prettyradio a {
   width: 20px;
   height: 20px;
-  background-image: url("../img/plugins/prettyCheckable/prettyCheckable-blue.png");
+  background-image: url("../assets/plugins/prettyCheckable/prettyCheckable-blue.png");
 }
 .prettycheckbox label,
 .prettyradio label {
@@ -9696,35 +9695,35 @@ div.jGrowl div.purple a:hover {
 }
 .prettycheckbox.red a,
 .prettyradio.red a {
-  background-image: url("../img/plugins/prettyCheckable/prettyCheckable-red.png");
+  background-image: url("../assets/plugins/prettyCheckable/prettyCheckable-red.png");
 }
 .prettycheckbox.blue a,
 .prettyradio.blue a {
-  background-image: url("../img/plugins/prettyCheckable/prettyCheckable-blue.png");
+  background-image: url("../assets/plugins/prettyCheckable/prettyCheckable-blue.png");
 }
 .prettycheckbox.green a,
 .prettyradio.green a {
-  background-image: url("../img/plugins/prettyCheckable/prettyCheckable-green.png");
+  background-image: url("../assets/plugins/prettyCheckable/prettyCheckable-green.png");
 }
 .prettycheckbox.purple a,
 .prettyradio.purple a {
-  background-image: url("../img/plugins/prettyCheckable/prettyCheckable-purple.png");
+  background-image: url("../assets/plugins/prettyCheckable/prettyCheckable-purple.png");
 }
 .prettycheckbox.turquoise a,
 .prettyradio.turquoise a {
-  background-image: url("../img/plugins/prettyCheckable/prettyCheckable-turquoise.png");
+  background-image: url("../assets/plugins/prettyCheckable/prettyCheckable-turquoise.png");
 }
 .prettycheckbox.orange a,
 .prettyradio.orange a {
-  background-image: url("../img/plugins/prettyCheckable/prettyCheckable-orange.png");
+  background-image: url("../assets/plugins/prettyCheckable/prettyCheckable-orange.png");
 }
 .prettycheckbox.gray a,
 .prettyradio.gray a {
-  background-image: url("../img/plugins/prettyCheckable/prettyCheckable-gray.png");
+  background-image: url("../assets/plugins/prettyCheckable/prettyCheckable-gray.png");
 }
 .prettycheckbox.dark a,
 .prettyradio.dark a {
-  background-image: url("../img/plugins/prettyCheckable/prettyCheckable-dark.png");
+  background-image: url("../assets/plugins/prettyCheckable/prettyCheckable-dark.png");
 }
 .todo-block .prettycheckbox label,
 .todo-block .prettyradio label {
@@ -9930,7 +9929,7 @@ div.jGrowl div.purple a:hover {
   height: 16px;
   line-height: 16px;
   vertical-align: text-top;
-  background-image: url("../img/icons/emoticons-icons.png");
+  background-image: url("../assets/icons/emoticons-icons.png");
   background-position: 16px 16px;
   background-repeat: no-repeat;
   *margin-right: .3em;
