@@ -10,7 +10,7 @@ class Invoice < ActiveRecord::Base
   validates_presence_of :customer_id, :invoicetype
   validates_numericality_of :amount, :allow_blank => true
   validates_numericality_of :invoicenumber, :if => :is_invoice?
-  validates_uniqueness_of :invoicenumber, :if => :is_invoice?
+  validates_uniqueness_of :invoicenumber, :if => :is_invoice?, :scope => :user_id
   
   validates_presence_of :invoicenumber, :if => :is_invoice?
   

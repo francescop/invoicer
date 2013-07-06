@@ -5,8 +5,8 @@ class Customer < ActiveRecord::Base
   has_many :invoices, :dependent => :destroy
   
   validates_presence_of :fullname
-  validates_uniqueness_of :fullname
-  validates_uniqueness_of :vat, :allow_blank => true
+  validates_uniqueness_of :fullname, :scope => :user_id
+  validates_uniqueness_of :vat, :allow_blank => true, :scope => :user_id
   
   def quotes
     return Invoice.where(:customer_id => self.id, :invoicetype => "Quote").count
