@@ -38,7 +38,7 @@
 		  	<%= f.label :invoicetype, :class => "control-label" %>
 			<div class="controls">
 				<div class="input-append no-margin">
-					<%= f.select :invoicetype, Invoice::INVOICE_TYPES, :selected => params[:invoicetype] %>
+					<%= f.select :invoicetype, invoice_types, :selected => params[:invoicetype] %>
 				</div>
 			</div>
 		  </div>
@@ -47,7 +47,7 @@
 		  	<%= f.label :status, :class => "control-label" %>
 			<div class="controls">
 				<div class="input-append no-margin">
-					<%= f.select :status, Invoice::INVOICE_STATUS %>
+					<%= f.select :status, invoice_status %>
 				</div>
 			</div>
 		  </div>

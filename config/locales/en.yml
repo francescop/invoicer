@@ -7,7 +7,131 @@ en:
     percentage: 'percentage'
     fixed_tax: 'fixed amount tax'
     percentage_tax: 'percentage tax'
+  invoice_types:
+    "Invoice": "Invoice"
+    "Quote": "Quote"
+  invoice_status:
+    "New": "New"
+    "Paid": "Paid"
+    "Unpaid": "Unpaid"
   hello: "Hello world"
+  
+  number:
+    currency:
+      format:
+        format: "%u %n"
+        unit: "$"
+        precision: 2
+
+    attributes:
+      customer:
+        fullname: "Full name"
+        address: "Address"
+        city: "City"
+        postalcode: "Postal code"
+        vat: "VAT"
+        phone: "Phone"
+      
+      invoice:
+        amount: 'Amount'
+        customer_id: 'Customer'
+        expiredate: 'Expire date'
+        status: 'Status'
+        invoicetype: 'Tipe'
+        invoicenumber: 'Invoice number'
+        'Invoice': 'Invoice'
+      
+      user:
+        companyname: "Company name"
+        lang: "Language"
+        phone: "Phone"
+        address: "Address"
+        city: "City"
+        postalcode: "Postal code"
+        vat: "VAT"
+        
+#invoice -> :amount, :customer_id, :expiredate, :status, :invoicetype, :invoicenumber, :invoicefields_attributes
+
+    models:
+      customer: "Customer"
+      invoice: "Invoice"
+      user: "User"
+  
+  'Back': 'Back'
+  'Edit': 'Edit'
   "Calendar": "Calendar"
-  'today month,basicWeek': 'today month,basicWeek'
+  'today month,basicWeek': 'today month,basicWeek' # 'oggi mese,settimana'
+  'title': 'title'
+  'Save changes': 'Save changes'
+  'view': 'view'
+  'edit': 'edit'
+  'delete': 'delete'
+  'Invoice': 'Invoice'
+  'Quote': 'Quote'
+  'Product': 'Product'
+  'Qty': 'Quantity'
+  "Unit Price": 'Unit Price'
+  "Amount": 'Amount'
+  'Total Price': 'Total Price'
+  
+  # customer
+  
+  'Editing customer': 'Editing customer'
+  'Listing customers': 'Listing customers'
+  'Add customer': 'Add customer'
+  'Customer': 'Customer'
+  'New customer': 'New customer'
+  'Full Name': 'Full Name'
+  'Postalcode': "Postal code"
+  'Address': 'Postal code'
+  'City': 'City'
+  'Phone': 'Phone'
+  'Quotes': 'Quotes'
+  'Paid invoices': 'Paid invoices'
+  'Open invoices': 'Open invoices'
+  'Unpaid invoices': 'Unpaid invoice'
+  'Vat': 'Vat'
+  'Invoice type': 'Invoice type'
+  'Invoice number': 'Invoice number'
+  'Date': 'Date'
+  'Expiredate': 'Expiredate'
+  'Amount': 'Amount'
+  'Status': 'Status'
+  
+  # welcome 
+  'Add invoice': 'Add invoice'
+  'Add quote': 'Add quote'
+  'Add customer': 'Add customer'
+  'Invoices calendar': 'Invoices calendar'
+  'Edit profile': 'Edit profile'
+  'Dashboard': 'Dashboard'
+  'Invoices': 'Invoices'
+  'Customers': 'Customers'
+   
+  # invoice
+  'Invoice': 'Invoice'
+  'Type': 'Type'
+  'Total': 'Total'
+  'Price': 'Price'
+  'Rate': 'Rate'
+  'Units': 'Units'
+  'Description': 'Description'
+  'New invoice': 'New invoice'
+  'Add invoice': 'Add invoice'
+  'Add quote': 'Add quote'
+  'Listing invoices': 'Listing invoices'
+  'Listing quotes': 'Listing quotes'
+  'Number': 'Number'
+  'Actions': 'Actions'
+  'Editing invoice': 'Editing invoice'
+  '[remove]': '[remove]'
+  'New': 'New'
+  'Paid': 'Paid'
+  'Unpaid': 'Unpaid'
+  'Set paid': 'Set paid'
+  'Set unpaid': 'Set unpaid'
+  'Became invoice': 'Became invoice' 
+  'Last invoice number is': 'Last invoice number is'
+  'Add field': 'Add field'
+  'Save changes': 'Save changes'
 

@@ -21,6 +21,14 @@ class Invoice < ActiveRecord::Base
   INVOICE_TYPES = ["Invoice", "Quote"]
   INVOICE_STATUS = ["New", "Paid", "Unpaid"]
   
+  def translated_invoice_type
+    I18n.t(invoice_type, :scope => :invoice_types)
+  end
+  
+  def translated_invoice_statu
+    I18n.t(invoice_statu, :scope => :invoice_status)
+  end
+  
   def is_invoice?
     invoicetype == "Invoice"
   end

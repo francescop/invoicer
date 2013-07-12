@@ -7,6 +7,13 @@ it:
     percentage: 'percentuale'
     fixed_tax: 'tassa fissa'
     percentage_tax: 'tassa percentuale'
+  invoice_types:
+    "Invoice": "Fattura"
+    "Quote": "Preventivo"
+  invoice_status:
+    "New": "Nuova"
+    "Paid": "Pagata"
+    "Unpaid": "Non pagata"
   number:
     currency:
       format:
