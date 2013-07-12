@@ -48,10 +48,6 @@ Invoicer::Application.configure do
   # Precompile additional assets (application.js, application.css, and all non-JS/CSS are already added)
   # config.assets.precompile += %w( search.js )
 
-	 # RAILS_ENV=production bundle exec rake assets:precompile:all
-	#config.assets.precompile += %w( bootstrap-datepicker.js bootstrap.min.js bootstrapSwitch.js customers.js.coffee invoicefields.js.coffee invoices.js.coffee jquery.datatables.min.js jquery.fullcalendar.min.js jquery.visualize.min.js jquery.visualize.tooltip.min.js modernizr.js selectivizr.js welcome.js.coffee table_index.js jquery.fullcalendar.css  prettyCheckable.css  sangoma-blue.css )
-  config.assets.precompile += %w( bootstrap-datepicker.js bootstrap.min.js bootstrapSwitch.js jquery.datatables.min.js jquery.fullcalendar.min.js jquery.visualize.min.js jquery.visualize.tooltip.min.js modernizr.js selectivizr.js jquery.fullcalendar.css prettyCheckable.css  theme-blue.css )
-
   # Disable delivery errors, bad email addresses will be ignored
   # config.action_mailer.raise_delivery_errors = false
 
