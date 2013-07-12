@@ -124,7 +124,7 @@
 						next: '<span class="icon-chevron-right"></span>'
 					},
 					editable: true,
-					<% if I18n.locale = "it" %>
+					<% if I18n.locale == "it" %>
 						buttonText: {
 				            today: 'oggi',
 				            day: 'giorno',
@@ -138,7 +138,7 @@
 					<% end %>
 					events: [
 					
-					<% current_user.invoices.where(:invoicetype => 'Invoice').each do |invoice| %>
+					<% Invoice.where(:invoicetype => 'Invoice').each do |invoice| %>
 						
 						
 						{

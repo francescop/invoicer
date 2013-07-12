@@ -2,8 +2,8 @@ class InvoicesController < ApplicationController
   # GET /invoices
   # GET /invoices.json
   def index
-    @invoices = current_user.invoices.where(:invoicetype => "Invoice")
-    @quotes = current_user.invoices.where(:invoicetype => "Quote")
+    @invoices = Invoice.where(:invoicetype => "Invoice")
+    @quotes = Invoice.where(:invoicetype => "Quote")
 
     respond_to do |format|
       format.html # index.html.erb
@@ -14,17 +14,11 @@ class InvoicesController < ApplicationController
   # GET /invoices/1
   # GET /invoices/1.json
   def show
-    @invoice = current_user.invoices.find(params[:id])
+    @invoice = Invoice.find(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @invoice }
-      format.pdf do
-        pdf = InvoicePdf.new(@invoice, current_user, view_context)
-        send_data pdf.render, filename: "#{@invoice.invoicenumber}_#{@invoice.customer.fullname}.pdf",
-                              type: "application/pdf",
-                              disposition: "inline"
-      end
       #format.js
     end
   end
@@ -42,15 +36,14 @@ class InvoicesController < ApplicationController
 
   # GET /invoices/1/edit
   def edit
-    @invoice = current_user.invoices.find(params[:id])
+    @invoice = Invoice.find(params[:id])
   end
 
   # POST /invoices
   # POST /invoices.json
   def create
     @invoice = Invoice.new(params[:invoice])
-    @invoice.user = current_user
-
+    
     respond_to do |format|
       if @invoice.save
         format.html { redirect_to @invoice, notice: 'Invoice was successfully created.' }
@@ -65,7 +58,7 @@ class InvoicesController < ApplicationController
   # PUT /invoices/1
   # PUT /invoices/1.json
   def update
-    @invoice = current_user.invoices.find(params[:id])
+    @invoice = Invoice.find(params[:id])
 
     respond_to do |format|
       if @invoice.update_attributes(params[:invoice])
@@ -82,7 +75,7 @@ class InvoicesController < ApplicationController
   # DELETE /invoices/1
   # DELETE /invoices/1.json
   def destroy
-    @invoice = current_user.invoices.find(params[:id])
+    @invoice = Invoice.find(params[:id])
     @invoice.destroy
 
     respond_to do |format|

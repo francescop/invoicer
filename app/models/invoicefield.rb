@@ -1,5 +1,4 @@
 class Invoicefield < ActiveRecord::Base
-  belongs_to :user
   belongs_to :invoice
   attr_accessible :amount, :invoice_id, :title, :fieldtype, :units, :rate
   

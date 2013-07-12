@@ -10,7 +10,7 @@
 										    <td><%= invoice.created_at.strftime("%d/%m/%Y") %></td>
 										    <td><%= invoice.expiredate.strftime("%d/%m/%Y") %></td>
 										    <td><%= invoice.customer.fullname %></td>
-										    <td><%= number_to_currency(invoice.amount, locale: current_user.lang) %></td>
+										    <td><%= number_to_currency(invoice.amount) %></td>
 										    
 										    <td>
 										    	
@@ -33,12 +33,7 @@
 										    </td>
 
 											<td class="toolbar">
-												<div class="btn-group">
-													
-													<%= link_to invoice_path(invoice, format: "pdf") do %>
-												  		<button class="btn btn-small" data-toggle="tooltip" title="download pdf" data-placement="bottom"><span class="icon-download-alt"></span></button>
-													<% end %>
-													
+												<div class="btn-group">											
 													
 													<%= link_to invoice do %>
 												  		<button class="btn btn-small" data-toggle="tooltip" title="<%= t('view') %>" data-placement="bottom"><span class="icon-eye-open"></span></button>

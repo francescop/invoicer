@@ -2,7 +2,7 @@ class CustomersController < ApplicationController
   # GET /customers
   # GET /customers.json
   def index
-    @customers = current_user.customers #.all
+    @customers = Customer.all
 
     respond_to do |format|
       format.html # index.html.erb
@@ -13,7 +13,7 @@ class CustomersController < ApplicationController
   # GET /customers/1
   # GET /customers/1.json
   def show
-    @customer = current_user.customers.find(params[:id])
+    @customer = Customer.find(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
@@ -34,14 +34,13 @@ class CustomersController < ApplicationController
 
   # GET /customers/1/edit
   def edit
-    @customer = current_user.customers.find(params[:id])
+    @customer = Customer.find(params[:id])
   end
 
   # POST /customers
   # POST /customers.json
   def create
     @customer = Customer.new(params[:customer])
-    @customer.user = current_user
     
     respond_to do |format|
       if @customer.save
@@ -57,7 +56,7 @@ class CustomersController < ApplicationController
   # PUT /customers/1
   # PUT /customers/1.json
   def update
-    @customer = current_user.customers.find(params[:id])
+    @customer = Customer.find(params[:id])
 
     respond_to do |format|
       if @customer.update_attributes(params[:customer])
@@ -73,7 +72,7 @@ class CustomersController < ApplicationController
   # DELETE /customers/1
   # DELETE /customers/1.json
   def destroy
-    @customer = current_user.customers.find(params[:id])
+    @customer = Customer.find(params[:id])
     @customer.destroy
 
     respond_to do |format|

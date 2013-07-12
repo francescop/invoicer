@@ -40,3 +40,5 @@ gem 'jquery-rails'
 gem 'devise'
 gem 'prawn'
 gem 'puma'
+
+gem 'rb-readline', '~> 0.4.2'

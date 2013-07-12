@@ -1,7 +1,6 @@
 class Invoice < ActiveRecord::Base
   attr_accessible :amount, :customer_id, :expiredate, :status, :invoicetype, :invoicenumber, :invoicefields_attributes
   
-  belongs_to :user
   belongs_to :customer
   
   has_many :invoicefields, :dependent => :destroy
@@ -10,7 +9,7 @@ class Invoice < ActiveRecord::Base
   validates_presence_of :customer_id, :invoicetype
   validates_numericality_of :amount, :allow_blank => true
   validates_numericality_of :invoicenumber, :if => :is_invoice?
-  validates_uniqueness_of :invoicenumber, :if => :is_invoice?, :scope => :user_id
+  validates_uniqueness_of :invoicenumber, :if => :is_invoice?
   
   validates_presence_of :invoicenumber, :if => :is_invoice?
   
@@ -35,7 +34,7 @@ class Invoice < ActiveRecord::Base
   
   def was_quote
     if invoicetype_was == "Quote" && invoicetype == "Invoice" && invoicenumber == nil
-      self.invoicenumber = Invoice.where(:user_id => user_id, :invoicetype => "Invoice").last.invoicenumber += 1
+      self.invoicenumber = Invoice.where(:invoicetype => "Invoice").last.invoicenumber += 1
     end
   end
   
